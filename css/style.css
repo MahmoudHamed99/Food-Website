@@ -1,0 +1,343 @@
+/* Start Global-Rules */
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Poppins', sans-serif;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+    cursor: pointer;
+}
+input:focus {
+    outline: none;
+}
+/* Start Global-Rules */
+
+/* Start Variables */
+:root {
+    --main-color: #FF0157;
+    --dark-t: #111;
+    --light-t: #666;
+    --padd-top: 100px;
+    --padd-btm: 100px;
+    --trans: 0.5s;
+}
+/* Start Variables */
+
+/* Start Framework */
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.my-btn {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    padding: 10px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: var(--main-color);
+    color: white;
+    border-radius: 3px;
+    transition: var(--trans);
+}
+.my-btn:hover {
+    letter-spacing: 2px;
+}
+.head {
+    margin-bottom: 70px;
+    text-align: center;
+}
+.main-h {
+    margin: 0 0 10px;
+    font-weight: 300;
+    font-size: 1.9em;
+    color: var(--dark-t);
+}
+.main-h span {
+    color: var(--main-color);
+    font-weight: bold;
+    font-size: 1.6em;
+}
+.main-h + p {
+    margin: 0;
+    color: var(--dark-t);
+    font-size: 1.1em;
+}
+/* End Framework */
+
+
+/* Start Navigation */
+nav {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 40px 0;
+    transition: 0.2s;
+}
+nav.sticky {
+    padding: 20px 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 10px 3px 11px rgb(0 0 0 / 5%);
+}
+nav.sticky .logo,
+nav.sticky .links li a {
+    color: var(--dark-t);
+}
+nav .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+}
+nav .logo span {
+    color: var(--main-color);
+}
+nav .icon {
+    display: none;
+}
+nav .links {
+    display: flex;
+}
+nav .links .close {
+    display: none;
+}
+nav .links li {
+    margin-left: 25px;
+}
+nav .links li a {
+    color: white;
+    font-size: 1.1em;
+    transition: var(--trans);
+}
+nav .links li a:hover {
+    color: var(--main-color);
+}
+/* End Navigation */
+
+/* Start Header */
+header {
+    height: 100vh;
+    background-image: url("../images/bg.jpg");
+    background-size: cover;
+}
+header .intro {
+    width: 1000px;
+    padding: 0 15px;
+    text-align: center;
+}
+header .intro h1 {
+    margin: 0 0 10px;
+    color: white;
+    font-size: 5em;
+}
+header .intro p {
+    margin: 20px 0;
+    color: #EEE;
+    font-size: 1.1em;
+}
+/* End Header */
+
+/* Start About-Us */
+.about {
+    padding-top: var(--padd-top);
+    padding-bottom: var(--padd-btm);
+}
+.about .sec-cont {
+    display: flex;
+    gap: 50px;
+}
+.about .sec-cont > div {
+    flex-basis: 50%;
+}
+.about .sec-cont .text p {
+    line-height: 1.5;
+    margin: 0;
+    color: var(--dark-t);
+}
+.about .sec-cont .text p:first-of-type {
+    margin-bottom: 20px;
+}
+.about .sec-cont .image img {
+    max-width: 100%;
+    height: 100%;
+}
+/* End About-Us */
+
+/* Start Our-Menu */
+.menu {
+    padding-top: var(--padd-top);
+    padding-bottom: var(--padd-btm);
+}
+.menu .cards-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.menu .cards-cont .card {
+    padding: 15px;
+    background-color: white;
+    box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 9%);
+}
+.menu .cards-cont .card img {
+    width: 100%;
+}
+.menu .cards-cont .card p {
+    margin: 10px 0 5px;
+    color: var(--dark-t);
+}
+/* End Our-Menu */
+
+/* Start Expert */
+.expert {
+    padding-top: var(--padd-top);
+    padding-bottom: var(--padd-btm);
+}
+.expert .box-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+.expert .box-cont .box img {
+    width: 100%;
+    max-height: 100%;
+}
+.expert .box-cont .box p {
+    margin: 10px 0 0;
+    color: var(--dark-t);
+}
+/* End Expert */
+
+/* Start Testmonials */
+.testmonials {
+    padding-top: var(--padd-top);
+    padding-bottom: var(--padd-btm);
+    background-image: url("../images/bg2.jpg");
+    background-size: cover;
+}
+.testmonials .head h2,
+.testmonials .head p {
+    color: #EEE;
+}
+.testmonials .cards-cont {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+.testmonials .cards-cont .card {
+    background-color: white;
+    padding: 40px;
+    text-align: center;
+}
+.testmonials .cards-cont .card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+.testmonials .cards-cont .card p {
+    margin: 15px 0;
+    line-height: 1.6;
+    color: var(--light-t);
+    font-style: italic;
+}
+.testmonials .cards-cont .card span {
+    display: block;
+    margin: 20px 0 0;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--main-color);
+}
+/* End Testmonials */
+
+/* Start Contact-Us */
+.contact {
+    padding-top: var(--padd-top);
+    padding-bottom: var(--padd-btm);
+    background-image: url("../images/bg3.jpg");
+    background-size: cover;
+}
+.contact form {
+    min-height: 550px;
+    max-width: 500px;
+    padding: 40px;
+    box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 9%);
+}
+.contact form h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--dark-t);
+}
+.contact form input {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    caret-color: var(--main-color);
+}
+.contact form input[type="submit"] {
+    width: fit-content;
+    padding: 10px 25px;
+    margin-left: 0;
+    border: none;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+.contact form textarea {
+    width: 100%;
+    margin-bottom: 20px;
+    height: 150px;
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 3px;
+    resize: none;
+    caret-color: var(--main-color);
+}
+.contact form textarea:focus {
+    outline: none;
+}
+/* End Contact-Us */
+
+/* Start Footer */
+footer {
+    padding: 30px 0;
+    box-shadow: 0px 0px 15px 5px rgb(0 0 0 / 9%);
+}
+footer .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer p {
+    margin: 0;
+    font-size: 1.1em;
+    color: var(--dark-t);
+}
+footer p span {
+    color: var(--main-color);
+    font-weight: 600;
+}
+/* End Footer */
